@@ -615,7 +615,7 @@ footer .footer-paragraph {
     height: 8px;
     fill: #2e2f42;
     pointer-events: none;
-    transition: fill 250ms ease;
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .modal-close-btn:hover,
@@ -636,6 +636,8 @@ footer .footer-paragraph {
     color: #2e2f42;
     text-align: center;
     margin-bottom: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
 }
 
 /* Форма */
@@ -650,6 +652,7 @@ footer .footer-paragraph {
     display: flex;
     flex-direction: column;
     position: relative;
+    margin-bottom: 8px;
 }
 
 /* Лейбл */
@@ -694,11 +697,13 @@ footer .footer-paragraph {
     position: absolute;
     left: 16px;
     bottom: 50%;
-    transform: translateY(50%);
     width: 16px;
     height: 16px;
     fill: #2e2f42;
     pointer-events: none;
+    top: 50%;
+    transform: translateY(-50%);
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 /* Блок з checkbox */
@@ -744,7 +749,10 @@ footer .footer-paragraph {
     justify-content: center;
     align-items: center;
     background-color: transparent;
-    transition: background-color 250ms ease, border-color 250ms ease;
+    fill: transparent;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+            border 250ms cubic-bezier(0.4, 0, 0.2, 1),
+            fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .checkbox-icon {
@@ -754,12 +762,17 @@ footer .footer-paragraph {
 
 /* Відображення іконки, коли checkbox активний */
 .form-checkbox:checked+.checkbox-label .checkbox-custom {
-    background-color: #4d5ae5;
-    border-color: #4d5ae5;
+    background-color: #404bbf;
+    border: none;
+    fill: #f4f4fd;
 }
 
 .form-checkbox:checked+.checkbox-label .checkbox-icon {
     display: block;
+}
+
+.input-wrapper:focus-within .form-icon {
+    fill: #4d5ae5;
 }
 
 /* Посилання на політику */
@@ -780,9 +793,38 @@ footer .footer-paragraph {
     border-radius: 4px;
     cursor: pointer;
     transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    min-width: 169px;
+    height: 56px;
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.04em;
 }
 
 .submit-btn:hover,
 .submit-btn:focus {
     background-color: #404bbf;
+}
+
+.form-input {
+    height: 40px;
+    outline: transparent;
+    transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.form-textarea {
+    height: 120px;
+    font-size: 12px;
+    line-height: 1.17;
+    letter-spacing: 0.04em;
+    color: rgba(46, 47, 66, 0.4);
+    padding: 8px 16px;
+    outline: transparent;
+    resize: none;
+    transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.form-label,
+.checkbox-label {
+    line-height: 1.17;
+    letter-spacing: 0.04em;
 }
