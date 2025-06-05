@@ -10,7 +10,7 @@ h4,
 h5,
 h6,
 p {
-    margin: 0; 
+    margin: 0;
 }
 
 body {
@@ -77,7 +77,7 @@ a {
 .footer-logo {
     font-family: "Raleway", sans-serif;
     font-weight: 700;
-    font-size: 18px;       
+    font-size: 18px;
     line-height: 1.17;
     letter-spacing: 0.03em;
     margin-bottom: 16px;
@@ -113,7 +113,7 @@ a {
 .contacts-link:hover,
 .contacts-link:focus,
 .nav-link.current {
-    color: #404bbf; 
+    color: #404bbf;
 }
 
 .hero-section {
@@ -124,7 +124,7 @@ a {
     background-image: linear-gradient(rgba(46, 47, 66, 0.7),
             rgba(46, 47, 66, 0.7)),
         url("../images/hero-bg.jpg");
-    
+
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -174,10 +174,6 @@ a {
     flex-basis: calc((100% - 72px) / 4);
 }
 
-.feature-title {
-    margin-bottom: 8px; 
-}
-
 .visually-hidden {
     position: absolute;
     width: 1px;
@@ -196,7 +192,7 @@ a {
     gap: 24px;
     list-style: none;
     padding: 0;
-    margin: 0; 
+    margin: 0;
 }
 
 .feature-title {
@@ -241,7 +237,7 @@ a {
     list-style: none;
     padding: 0;
     margin: 0 auto;
-    justify-content: center; 
+    justify-content: center;
 }
 
 .team-item {
@@ -250,8 +246,8 @@ a {
     border-radius: 0 0 4px 4px;
     box-sizing: border-box;
     box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
-            0px 1px 1px rgba(46, 47, 66, 0.16),
-            0px 2px 1px rgba(46, 47, 66, 0.08);
+        0px 1px 1px rgba(46, 47, 66, 0.16),
+        0px 2px 1px rgba(46, 47, 66, 0.08);
 }
 
 .team-img {
@@ -262,7 +258,7 @@ a {
 
 .team-info {
     padding: 32px 0;
-    text-align: center; 
+    text-align: center;
 }
 
 .team-info .socials-list {
@@ -285,11 +281,12 @@ a {
     letter-spacing: 0.02em;
     color: #434455;
     margin: 0;
-    text-align: center; 
+    text-align: center;
 }
 
 .portfolio-section {
-    padding: 120px 0; }
+    padding: 120px 0;
+}
 
 .portfolio-title {
     font-family: "Roboto", sans-serif;
@@ -308,7 +305,7 @@ a {
     gap: 48px 24px;
     padding: 0;
     margin: 0;
-    list-style: none; 
+    list-style: none;
 }
 
 .portfolio-item {
@@ -352,7 +349,7 @@ a {
 .portfolio-info {
     padding: 32px 16px;
     border: 1px solid #e7e9fc;
-    border-top: none; 
+    border-top: none;
 }
 
 .portfolio-item-title {
@@ -483,4 +480,309 @@ footer .footer-paragraph {
     letter-spacing: 0.02em;
     color: #ffffff;
     margin-bottom: 16px;
+}
+
+.subscribe-title {
+    margin-bottom: 16px;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+    color: #ffffff;
+}
+
+.subscribe-form {
+    display: flex;
+    gap: 24px;
+}
+
+.subscribe-label {
+    display: block;
+}
+
+.subscribe-input {
+    width: 264px;
+    height: 40px;
+    border: 1px solid #ffffff;
+    background-color: transparent;
+    font-size: 12px;
+    line-height: 2;
+    letter-spacing: 0.04em;
+    padding-left: 16px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    border-radius: 4px;
+    color: #ffffff;
+}
+
+.subscribe-input::placeholder {
+    color: #ffffff;
+}
+
+.subscribe-button {
+    min-width: 165px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "Roboto", sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 1.5;
+    letter-spacing: 0.04em;
+    color: #ffffff;
+    cursor: pointer;
+    background-color: #4d5ae5;
+    border: none;
+    border-radius: 4px;
+}
+
+.subscribe-icon {
+    margin-left: 16px;
+    fill: #ffffff;
+}
+
+
+.subscribe-container {
+    margin-left: 80px;
+}
+
+/* Оверлей: затемнення екрану при відкритті модалки */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(46, 47, 66, 0.4);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1), visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.modal-overlay.is-open {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+}
+
+/* Модальне вікно */
+.modal-window {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0.95);
+    min-height: 584px;
+    width: 100%;
+    max-width: 408px;
+    background-color: #fcfcfc;
+    border-radius: 4px;
+    padding: 72px 24px 24px;
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.14),
+        0px 1px 3px rgba(0, 0, 0, 0.12),
+        0px 2px 1px rgba(0, 0, 0, 0.2);
+    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.modal-overlay.is-open .modal-window {
+    transform: translate(-50%, -50%) scale(1);
+}
+
+/* Кнопка закриття */
+.modal-close-btn {
+    position: absolute;
+    top: 24px;
+    right: 24px;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #e7e9fc;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    padding: 0;
+    cursor: pointer;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.modal-close-icon {
+    width: 8px;
+    height: 8px;
+    fill: #2e2f42;
+    pointer-events: none;
+    transition: fill 250ms ease;
+}
+
+.modal-close-btn:hover,
+.modal-close-btn:focus {
+    background-color: #404bbf;
+    border: none;
+}
+
+.modal-close-btn:hover .modal-close-icon,
+.modal-close-btn:focus .modal-close-icon {
+    fill: #ffffff;
+}
+
+/* Заголовок */
+.modal-title {
+    font-size: 16px;
+    font-weight: 500;
+    color: #2e2f42;
+    text-align: center;
+    margin-bottom: 16px;
+}
+
+/* Форма */
+.modal-form {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+/* Група інпуту */
+.form-group {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+/* Лейбл */
+.form-label {
+    font-size: 12px;
+    color: #8e8f99;
+    margin-bottom: 4px;
+}
+
+/* Обгортка інпуту та іконки */
+.input-wrapper {
+    position: relative;
+}
+
+/* Інпут та textarea */
+.form-input,
+.form-textarea {
+    width: 100%;
+    padding: 8px 16px 8px 38px;
+    font-size: 14px;
+    color: #2e2f42;
+    border: 1px solid rgba(46, 47, 66, 0.4);
+    border-radius: 4px;
+    background-color: transparent;
+    transition: border-color 250ms ease;
+}
+
+.form-input:focus,
+.form-textarea:focus {
+    border-color: #4d5ae5;
+    outline: none;
+}
+
+.form-textarea {
+    resize: vertical;
+    min-height: 80px;
+    max-height: 200px;
+}
+
+/* Іконка в полі */
+.form-icon {
+    position: absolute;
+    left: 16px;
+    bottom: 50%;
+    transform: translateY(50%);
+    width: 16px;
+    height: 16px;
+    fill: #2e2f42;
+    pointer-events: none;
+}
+
+/* Блок з checkbox */
+.form-agreement {
+    display: flex;
+    align-items: flex-start;
+    gap: 8px;
+    font-size: 12px;
+    color: #8e8f99;
+    margin-top: 16px;
+    line-height: 1.4;
+    position: relative;
+}
+
+/* Схований чекбокс */
+.form-checkbox.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    white-space: nowrap;
+    clip-path: inset(100%);
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+}
+
+/* Кастомний чекбокс */
+.checkbox-label {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+}
+
+.checkbox-custom {
+    display: inline-flex;
+    width: 16px;
+    height: 16px;
+    border: 1px solid rgba(46, 47, 66, 0.4);
+    border-radius: 2px;
+    justify-content: center;
+    align-items: center;
+    background-color: transparent;
+    transition: background-color 250ms ease, border-color 250ms ease;
+}
+
+.checkbox-icon {
+    display: none;
+    fill: #ffffff;
+}
+
+/* Відображення іконки, коли checkbox активний */
+.form-checkbox:checked+.checkbox-label .checkbox-custom {
+    background-color: #4d5ae5;
+    border-color: #4d5ae5;
+}
+
+.form-checkbox:checked+.checkbox-label .checkbox-icon {
+    display: block;
+}
+
+/* Посилання на політику */
+.privacy-link {
+    color: #4d5ae5;
+    text-decoration: underline;
+}
+
+/* Кнопка Submit */
+.submit-btn {
+    margin-top: 24px;
+    padding: 12px 24px;
+    font-size: 14px;
+    font-weight: 500;
+    color: #ffffff;
+    background-color: #4d5ae5;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.submit-btn:hover,
+.submit-btn:focus {
+    background-color: #404bbf;
 }
