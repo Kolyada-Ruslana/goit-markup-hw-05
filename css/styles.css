@@ -716,6 +716,7 @@ footer .footer-paragraph {
     margin-bottom: 24px;
     line-height: 1.4;
     position: relative;
+    display: flex;
 }
 
 /* Схований чекбокс */
