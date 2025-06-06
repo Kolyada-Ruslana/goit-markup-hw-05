@@ -644,7 +644,7 @@ footer .footer-paragraph {
 .modal-form {
     display: flex;
     flex-direction: column;
-    gap: 8px;
+    margin-bottom: 8px;
 }
 
 /* Група інпуту */
