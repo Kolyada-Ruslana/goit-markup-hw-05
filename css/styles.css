@@ -656,6 +656,13 @@ footer .footer-paragraph {
     margin-bottom: 8px;
 }
 
+.form-group-comment {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    margin-bottom: 16px;
+}
+
 /* Лейбл */
 .form-label {
     font-size: 12px;
