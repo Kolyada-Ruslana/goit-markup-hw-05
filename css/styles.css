@@ -652,7 +652,7 @@ footer .footer-paragraph {
     display: flex;
     flex-direction: column;
     position: relative;
-    margin-bottom: 16px;
+    margin-bottom: 8px;
 }
 
 /* Лейбл */
