@@ -644,6 +644,7 @@ footer .footer-paragraph {
 .modal-form {
     display: flex;
     flex-direction: column;
+    gap: 8px;
     margin-bottom: 8px;
 }
 
@@ -652,7 +653,7 @@ footer .footer-paragraph {
     display: flex;
     flex-direction: column;
     position: relative;
-    margin-bottom: 16px
+    margin-bottom: 8px
 }
 
 /* Лейбл */
