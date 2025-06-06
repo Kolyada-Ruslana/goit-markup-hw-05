@@ -642,23 +642,17 @@ footer .footer-paragraph {
 
 /* Форма */
 .modal-form {
-    display: flex;
-    flex-direction: column;
     gap: 8px;
     margin-bottom: 16px;
 }
 
 /* Група інпуту */
 .form-group {
-    display: flex;
-    flex-direction: column;
     position: relative;
     margin-bottom: 8px;
 }
 
 .form-group-comment {
-    display: flex;
-    flex-direction: column;
     position: relative;
     margin-bottom: 16px;
 }
