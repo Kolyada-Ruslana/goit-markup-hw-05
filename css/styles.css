@@ -716,7 +716,7 @@ footer .footer-paragraph {
     align-items: flex-start;
     gap: 8px;
     font-size: 12px;
-    color: #8e8f99;
+    color: #8E8F99;
     margin-bottom: 24px;
     line-height: 1.4;
     position: relative;
@@ -739,7 +739,6 @@ footer .footer-paragraph {
 
 /* Кастомний чекбокс */
 .checkbox-label {
-    display: flex;
     align-items: center;
     gap: 8px;
     cursor: pointer;
