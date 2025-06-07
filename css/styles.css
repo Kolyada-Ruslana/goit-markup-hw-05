@@ -796,6 +796,7 @@ footer .footer-paragraph {
     line-height: 1.5;
     letter-spacing: 0.04em;
     display: block;
+    margin: 0 auto;
     box-sizing: border-box;
 }
 
