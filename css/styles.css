@@ -642,7 +642,6 @@ footer .footer-paragraph {
 
 /* Форма */
 .modal-form {
-    flex-direction: column;
     margin-bottom: 16px;
 }
 
@@ -752,6 +751,7 @@ footer .footer-paragraph {
     align-items: center;
     justify-content: center;
     fill: transparent;
+    margin-right: 8px;
 }
 
 .checkbox-icon {
